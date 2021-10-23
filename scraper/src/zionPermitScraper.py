@@ -69,10 +69,10 @@ master = []
 TripType = ['1', '3', '4']
 
 for type_id in TripType:
-    driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver', options=chrome_options)
+    driver = webdriver.Chrome(executable_path='/usr/bin/chromedriver', options=chrome_options)
     base_url = 'https://zionpermits.nps.gov/wilderness.cfm?TripTypeID='
     url = base_url + type_id
-    print(url)
+
     driver.get(url)
     scrape_trip(type_id)
     driver.quit()

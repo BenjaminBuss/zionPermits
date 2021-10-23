@@ -8,6 +8,8 @@ The bread and butter of this project. A Selenium based script designed to scrape
 
 This script returns a csv with 96 rows, for the 48 potential areas(as of writing this). Each area has two rows of data, the permits available the current day, and the permits left unreserved for the next day.
 
+This csv is uploaded to an S3 bucket with a filename of `yyyy-mm-dd.csv`.
+
 ### Data Options
 
 - **permit_date**
