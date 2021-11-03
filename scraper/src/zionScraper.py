@@ -37,13 +37,13 @@ def scrape_trip(typeid):
         months = []
         for p in range(len(month)):
             months.append(month[p].text)
-        months = [months[x] for x in (0, 8)]
+        months = months[0]
 
         #  Last minute permits available
         full_day = driver.find_elements(By.XPATH, '//td[@class="znpwpcalendarfull"]')
         full_days = [full_day[0].text]
 
-        build_list(master, full_days, months[0], item, typeid)
+        build_list(master, full_days, months, item, typeid)
 
 
 import io
